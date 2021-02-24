@@ -1,0 +1,33 @@
+# /etc/conf.d/ogfuncoind: config file for /etc/init.d/ogfuncoind
+
+# Config file location
+#OGFUNCOIND_CONFIGFILE="/etc/ogfuncoin/ogfuncoin.conf"
+
+# What directory to write pidfile to?  (created and owned by $OGFUNCOIND_USER)
+#OGFUNCOIND_PIDDIR="/var/run/ogfuncoind"
+
+# What filename to give the pidfile
+#OGFUNCOIND_PIDFILE="${OGFUNCOIND_PIDDIR}/ogfuncoind.pid"
+
+# Where to write ogfuncoind data (be mindful that the blockchain is large)
+#OGFUNCOIND_DATADIR="/var/lib/ogfuncoind"
+
+# User and group to own ogfuncoind process
+#OGFUNCOIND_USER="ogfuncoin"
+#OGFUNCOIND_GROUP="ogfuncoin"
+
+# Path to ogfuncoind executable
+#OGFUNCOIND_BIN="/usr/bin/ogfuncoind"
+
+# Nice value to run ogfuncoind under
+#OGFUNCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+#OGFUNCOIND_OPTS=""
+
+# The timeout in seconds OpenRC will wait for ogfuncoind to terminate
+# after a SIGTERM has been raised.
+# Note that this will be mapped as argument to start-stop-daemon's
+# '--retry' option, which means you can specify a retry schedule
+# here. For more information see man 8 start-stop-daemon.
+OGFUNCOIND_SIGTERM_TIMEOUT=60
